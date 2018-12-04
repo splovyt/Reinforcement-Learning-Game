@@ -7,7 +7,7 @@ import random
 map = MapScheme().IBM
 
 # initialize the game
-game = Game(map)
+game = Game(map, verbose=True)
 RT = RenderTool(game)
 
 # name the players

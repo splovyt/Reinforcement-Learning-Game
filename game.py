@@ -3,8 +3,10 @@ from uuid import uuid4 as random_id_generator
 
 class Game:
 
-    def __init__(self, map_scheme):
+    def __init__(self, map_scheme, verbose=False):
         '''Initialize the game.'''
+        self.verbose = verbose
+
         ## initialize the map scheme ##
         self.map_scheme = map_scheme
 
@@ -142,7 +144,8 @@ class Game:
         assert len(self.players) == len(self.player_slots), 'Not all players are loaded in yet.'
         assert self.frame == 0, 'The game is already ongoing.'
         self.frame = 1
-        print('The game has been started!')
+        if self.verbose:
+            print('The game has been started!')
         return True
 
     def _move_player(self, new_r, new_c, player):
@@ -238,7 +241,8 @@ class Game:
     def check_game_status(self):
         if list(self.check_players_status().values()).count(True) == 1:
             self.ended = True
-            print('GAME OVER')
+            if self.verbose:
+                print('GAME OVER')
         return
 
     def update_frame(self):

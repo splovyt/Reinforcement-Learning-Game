@@ -1,19 +1,23 @@
+# source imports
 from game import Game, Player
 from render_tool import RenderTool, MapScheme
 
+# additional library imports
 import random
 import pandas as pd
 
+# dev imports
 from dev.utils import save_dict
+from tqdm import tqdm
 
 
 
-for _ in range(1000):
+for _ in tqdm(range(25000)):
     # choose the map
     map = MapScheme().IBM
 
     # initialize the game
-    game = Game(map)
+    game = Game(map, verbose=False)
     RT = RenderTool(game)
 
     # name the players
@@ -46,7 +50,8 @@ for _ in range(1000):
         RT.render_current_frame()
 
     # the outcome
-    print('outcome: {}'.format(game_status_dict['game_properties']['outcome']))
+    if game.verbose:
+        print('outcome: {}'.format(game_status_dict['game_properties']['outcome']))
 
     # save history
     moves_history = pd.DataFrame(columns=['player_1', 'player_2'])
