@@ -12,7 +12,7 @@ from tqdm import tqdm
 
 
 
-for _ in tqdm(range(25000)):
+for _ in tqdm(range(2000)):
     # choose the map
     map = MapScheme().IBM
 
@@ -34,11 +34,17 @@ for _ in tqdm(range(25000)):
 
         # select an action for the player
         # move_player1 = random.choice([player1.Still, player1.Up, player1.Down, player1.Left, player1.Right, player1.Bomb])
-        move_player1 = random.choice([player1.Up, player1.Down, player1.Left, player1.Right, player1.Bomb])
+        move_player1 = player1.Still
         move_player1()
 
-        # move_player2 = random.choice([player2.Still, player2.Up, player2.Down, player2.Left, player2.Right, player2.Bomb])
-        move_player2 = player2.Still
+        if game.frame == 1:
+            move_player2 = random.choice([player2.Up, player2.Left])
+        elif game.frame == 2:
+            move_player2 = player2.Bomb
+        else:
+            #move_player2 = random.choice([player2.Still, player2.Up, player2.Down, player2.Left, player2.Right, player2.Bomb])
+            move_player2 = random.choice([player2.Up, player2.Down, player2.Left, player2.Right, player2.Bomb])
+            #move_player2 = player2.Still
         move_player2()
 
         # update the frame

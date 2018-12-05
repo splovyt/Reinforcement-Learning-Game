@@ -1,12 +1,12 @@
 import os
 import shutil
-
-from dev.utils import load_dict
+from tqdm import tqdm
+from utils import load_dict
 
 MINIMUM_AMOUNT_OF_TURNS = 30
 MINIMUM_AMOUNT_OF_BOMBS = 2
 
-for game_id in [x for x in os.listdir('data') if '.' not in x]:
+for game_id in tqdm([x for x in os.listdir('data') if '.' not in x]):
     # remove if we did not get enough turns
     if not os.path.exists('data/{}/{}.pickle'.format(game_id, MINIMUM_AMOUNT_OF_TURNS)):
         print('removing the game because we did not make it past turn {}'.format(MINIMUM_AMOUNT_OF_TURNS))
@@ -27,3 +27,5 @@ for game_id in [x for x in os.listdir('data') if '.' not in x]:
         if bombs_placed < MINIMUM_AMOUNT_OF_BOMBS:
             print('removing the game because not enough bombs were placed')
             shutil.rmtree('data/{}'.format(game_id))
+
+os.system('python calculate_reward.py')
