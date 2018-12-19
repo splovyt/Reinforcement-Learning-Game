@@ -166,4 +166,4 @@ class RenderTool:
             if self.game.ended:
                 self.render_video()
 
-        return final_img
+        return final_img.convert('RGB')

@@ -9,11 +9,9 @@ MINIMUM_AMOUNT_OF_BOMBS = 2
 for game_id in tqdm([x for x in os.listdir('data') if '.' not in x]):
     # remove if we did not get enough turns
     if not os.path.exists('data/{}/{}.pickle'.format(game_id, MINIMUM_AMOUNT_OF_TURNS)):
-        print('removing the game because we did not make it past turn {}'.format(MINIMUM_AMOUNT_OF_TURNS))
         shutil.rmtree('data/{}'.format(game_id))
 
     else:
-        print('we have enough turns')
         all_json = [x for x in os.listdir('data/{}'.format(game_id)) if '.pickle' in x]
 
         # remove when there is no bomb placed
@@ -25,7 +23,6 @@ for game_id in tqdm([x for x in os.listdir('data') if '.' not in x]):
             bombs_placed += len(stage_1_bombs)
 
         if bombs_placed < MINIMUM_AMOUNT_OF_BOMBS:
-            print('removing the game because not enough bombs were placed')
             shutil.rmtree('data/{}'.format(game_id))
 
-os.system('python calculate_reward.py')
+os.system('python calculate_reward.py && python summarize_data.py')

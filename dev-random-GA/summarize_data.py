@@ -1,8 +1,9 @@
 import os, glob
 import pandas as pd
+from tqdm import tqdm
 
 summary_df = []
-for game in os.listdir('data/'):
+for game in tqdm(os.listdir('data/')):
     try:
         rewards_df = pd.read_csv(glob.glob('data/{}/reward*relative*.csv'.format(game))[0])
 

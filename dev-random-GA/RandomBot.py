@@ -6,15 +6,16 @@ from render_tool import RenderTool, MapScheme
 import random
 import pandas as pd
 
-# dev imports
-from dev.utils import save_dict
+# dev-RL-solution imports
+from utils import save_dict
 from tqdm import tqdm
 
 
 
-for _ in tqdm(range(2000)):
+for _ in tqdm(range(5000)):
     # choose the map
-    map = MapScheme().IBM
+    #map = MapScheme().IBM
+    map = MapScheme().standard
 
     # initialize the game
     game = Game(map, verbose=False)
@@ -26,7 +27,7 @@ for _ in tqdm(range(2000)):
 
     # start the game
     if game.start():
-        RT.render_current_frame()
+        RT.render_current_frame(save_media = False)
         game_status_dict = game.get_status_dict()
         save_dict('data/{}/{}.pickle'.format(game.id, game.frame), game_status_dict)
 
@@ -53,7 +54,7 @@ for _ in tqdm(range(2000)):
         save_dict('data/{}/{}.pickle'.format(game.id, game.frame), game_status_dict)
 
         # render the frame
-        RT.render_current_frame()
+        RT.render_current_frame(save_media = False)
 
     # the outcome
     if game.verbose:
