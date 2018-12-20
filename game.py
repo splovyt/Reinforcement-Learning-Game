@@ -1,5 +1,6 @@
 import numpy as np
 from uuid import uuid4 as random_id_generator
+from functools import wraps
 
 class Game:
 
@@ -239,7 +240,8 @@ class Game:
         return player_status
 
     def check_game_status(self):
-        if list(self.check_players_status().values()).count(True) == 1:
+        # if the amount of active players is less or equal than 1
+        if list(self.check_players_status().values()).count(True) <= 1:
             self.ended = True
             if self.verbose:
                 print('GAME OVER')
@@ -354,6 +356,7 @@ class Game:
 
 
 def validate(func):
+    @wraps(func)
     def wrapper(*args, **kwargs):
         player = args[0]
         assert player.game.frame > 0, 'You must start the game first! Use game.start().'
