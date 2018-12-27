@@ -2,7 +2,7 @@
 
 A reinforcement learning environment created to allow development of reinforcement learning algorithms, including basic solutions.
 
-![alt text](https://raw.githubusercontent.com/splovyt/Reinforcement-Learning-Game/master/docs/screenshot.png | height=300)
+<img src="https://raw.githubusercontent.com/splovyt/Reinforcement-Learning-Game/master/docs/screenshot.png" height=300>
 
 ## State of the solutions
 
