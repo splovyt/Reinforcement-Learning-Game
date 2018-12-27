@@ -6,7 +6,7 @@ A reinforcement learning environment created to allow development of reinforceme
 
 ## The Challenge
 
-Use my Bomberman-inspired game environment (Py3) to explore and train reinforcement learning algorithms (MCTS, DQN, Genetic Algorithms, and more) to develop an unbeatable AI agent!
+Use my Bomberman-inspired game environment (Py3) to explore and train reinforcement learning algorithms (MCTS, DQN, Genetic Algorithms, and more) to develop an unbeatable AI agent.
 
 Instructions on how to install this environment can be found below.
 
@@ -29,4 +29,8 @@ Highest potential for a good solutions (ref. AlphaGo and Chess), but still needs
 
 ## Instructions on how to install the environment
 
+coming soon
+
 ## How to play
+
+coming soon
