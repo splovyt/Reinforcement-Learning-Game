@@ -1,6 +1,7 @@
 # Reinforcement-Learning-Game
 
 A reinforcement learning environment created to allow development of reinforcement learning algorithms, including basic solutions.
+
 &nbsp;
 ## State of the solutions
 
