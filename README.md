@@ -4,7 +4,13 @@ A reinforcement learning environment created to allow development of reinforceme
 
 <img src="https://raw.githubusercontent.com/splovyt/Reinforcement-Learning-Game/master/docs/screenshot.png" height=300>
 
-## State of the solutions
+## The Challenge
+
+Use my Bomberman-inspired game environment (Py3) to explore and train reinforcement learning algorithms (MCTS, DQN, Genetic Algorithms, and more) to develop an unbeatable AI agent!
+
+Instructions on how to install this environment can be found below.
+
+## State of my solutions
 
 **A. Deep Q Network (DQN) - In Progress**
 
