@@ -33,4 +33,5 @@ coming soon
 
 ## How to play
 
-coming soon
+**Example: Player vs. Random Bot**
+![](docs/player_vs_random.gif)
