@@ -20,6 +20,6 @@ Currently randomly plays games to collect data for future selection.
 Highest potential for a good solutions (ref. AlphaGo and Chess), but still needs to be added. 
 
 
-## Instructions to install the environment
+## Instructions on how to install the environment
 
 ## How to play
