@@ -29,7 +29,26 @@ Highest potential for a good solutions (ref. AlphaGo and Chess), but still needs
 
 ## Instructions on how to install the environment
 
-coming soon
+1. Clone this repository
+```git clone ...```
+
+2. Install the ```requirements.txt``` or ```dev-requirements.txt``` file.
+
+```pip install -r dev-requirements.txt```
+
+or
+
+```pipenv install -r dev-requirements.txt```
+
+depending on which you are using.
+
+3. Navigate to the ```MyBot.py``` file. This is where you should code your algorithm. You can run this file to show a battle of two bots with randomly selected actions. Spoiler alert: it's only a matter of time until each bot blows itself up..
+
+- the standard option is to save the frames of the game and create a video at the end. The data will be saved in the ```data/{game_id}/``` folder.
+
+- besides saving the visual representations of the game, a data driven representation can be generated using the ```game.get_status_dict()``` function at any time.
+
+**Tip: The first step in developing a smart agent and getting a feel for the game is by running the standard script (random actions for both players) a couple of times and going through the game videos. Alternatively, you can play against a random bot (see next section).**
 
 ## How to play
 1. Install the ```requirements.txt``` or ```dev-requirements.txt``` file.
@@ -47,6 +66,8 @@ S (DOWN)
 A (LEFT)
 D (RIGHT)
 SPACE (BOMB)
+
+NOTE: The Bomb function for the bot has been disabled to make it unable to blow itself up.
 ```
 
 **Standard example: Player vs. Random Bot**
