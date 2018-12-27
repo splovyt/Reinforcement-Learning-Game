@@ -23,28 +23,36 @@ cv2.namedWindow(game.id)
 cv2.imshow(game.id, img)
 
 while 1:
+    # the pressed key
     k = cv2.waitKey(0)
-    if k == 27:
+    if k == 27: # ESCAPE KEY
+        print('Escape key pressed. Closing game..')
         break
     else:
-        # UP
-        if k == 122:
+        # UP (W key)
+        if k == 119: # change to 122 (Z) on azerty keyboards
             player1.Up()
-        # DOWN
+        # DOWN (S Key)
         elif k == 115:
             player1.Down()
-        # LEFT
-        elif k == 113:
+        # LEFT (A key)
+        elif k == 97: # change to 113 (Q) on azerty keyboards
             player1.Left()
-        # RIGHT
+        # RIGHT (D key)
         elif k == 100:
             player1.Right()
 
 
-        # BOMB
+        # BOMB (SPACE BAR)
         elif k == 32:
             player1.Bomb()
 
+        # If any other key is pressed (by accident), we stand still
+        else:
+            print("Not recognized key {} pressed. Standing still for this action..".format(k))
+            player1.Still()
+
+        # choose a random action for the other player (minus bomb to make sure that player2 does not blow itself up)
         move_func = random.choice([player2.Still, player2.Up, player2.Down, player2.Left, player2.Right])
         move_func()
 

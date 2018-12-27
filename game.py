@@ -146,7 +146,7 @@ class Game:
         assert self.frame == 0, 'The game is already ongoing.'
         self.frame = 1
         if self.verbose:
-            print('The game has been started!')
+            print('The game has been started! (id: {})'.format(self.id))
         return True
 
     def _move_player(self, new_r, new_c, player):

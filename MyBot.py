@@ -19,6 +19,7 @@ if game.start():
     RT.render_current_frame(save_media=True)
     game_status_dict = game.get_status_dict()
 
+# play until the game is finished
 while game_status_dict['game_properties']['outcome'] == 'ongoing':
 
     # select an action for the player
