@@ -70,5 +70,5 @@ SPACE (BOMB)
 NOTE: The Bomb function for the bot has been disabled to make it unable to blow itself up.
 ```
 
-**Standard example: Player vs. Random Bot**
+**Standard example: Player (blue) vs. Random Bot (purple)**
 ![](docs/player_vs_random.gif)
