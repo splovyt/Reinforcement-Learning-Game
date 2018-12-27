@@ -4,7 +4,7 @@ from render_tool import RenderTool, MapScheme
 import random
 
 # choose the map
-map = MapScheme().IBM
+map = MapScheme().standard
 
 # initialize the game
 game = Game(map, verbose=True)
@@ -16,7 +16,7 @@ player2 = Player(game, 'name_player2')
 
 # start the game
 if game.start():
-    RT.render_current_frame()
+    RT.render_current_frame(save_media=True)
     game_status_dict = game.get_status_dict()
 
 while game_status_dict['game_properties']['outcome'] == 'ongoing':
@@ -33,5 +33,5 @@ while game_status_dict['game_properties']['outcome'] == 'ongoing':
     game_status_dict = game.get_status_dict()
 
     # render the frame
-    RT.render_current_frame()
+    RT.render_current_frame(save_media=True)
 

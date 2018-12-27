@@ -116,7 +116,7 @@ class RenderTool:
         out.release()
         cv2.destroyAllWindows()
 
-    def render_current_frame(self, save_media = True):
+    def render_current_frame(self, save_media=True):
         # create blank image
         img = Image.new("RGBA", (self.x_tiles * self.tile_size, self.y_tiles * self.tile_size), "white")
 

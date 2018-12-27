@@ -6,7 +6,7 @@ import traceback
 import random
 
 # choose the map
-map = MapScheme().IBM
+map = MapScheme().standard
 
 # initialize the game
 game = Game(map)
@@ -16,7 +16,7 @@ player1 = Player(game, 'player1')
 player2 = Player(game, 'player2')
 
 if game.start():
-    img = RT.render_current_frame()
+    img = RT.render_current_frame(save_media=True)
 
 img = cv2.imread(RT.image_path + '{}.png'.format(game.frame))
 cv2.namedWindow(game.id)
@@ -50,7 +50,7 @@ while 1:
 
         try:
             game.update_frame()
-            RT.render_current_frame()
+            RT.render_current_frame(save_media=True)
             img = cv2.imread(RT.image_path + '{}.png'.format(game.frame))
             cv2.imshow(game.id, img)
         except Exception as exc:
