@@ -32,6 +32,22 @@ Highest potential for a good solutions (ref. AlphaGo and Chess), but still needs
 coming soon
 
 ## How to play
+1. Install the ```requirements.txt``` or ```dev-requirements.txt``` file.
 
-**Example: Player vs. Random Bot**
+2. Navigate to the ```play.py``` file.
+
+3. (OPTIONAL) Connect Player 2 to a smart agent.
+
+4. Run the ```play.py``` file.
+
+The standard controls in the play.py file are:
+```
+W (UP)
+S (DOWN)
+A (LEFT)
+D (RIGHT)
+SPACE (BOMB)
+```
+
+**Standard example: Player vs. Random Bot**
 ![](docs/player_vs_random.gif)
