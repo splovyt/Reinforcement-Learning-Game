@@ -12,7 +12,7 @@ Instructions on how to install this environment can be found below.
 
 ## State of my solutions
 
-**A. Deep Q Network (DQN) - In Progress**
+**A. Deep Q Network (DQN)**
 
 Basic implementation is complete.
 
