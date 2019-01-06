@@ -24,8 +24,11 @@ Currently randomly plays games to collect data for future selection.
 
 **C. Monte Carlo Tree Search (MCTS) - In Progress**
 
-Highest potential for a good solutions (ref. AlphaGo and Chess), but still needs to be added. 
+High potential for a good solution (ref. AlphaGo and Chess), but still needs to be added. 
 
+**D. Minimax algorithm - In Progress**
+
+High potential for a good solution (ref. AlphaGo and Chess), but still needs to be added. 
 
 ## Instructions on how to install the environment
 
