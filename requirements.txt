@@ -1,30 +1,30 @@
--i https://pypi.org/simple
-appnope==0.1.0 ; sys_platform == 'darwin'
-backcall==0.1.0
-decorator==4.3.0
+-i https://pypi.org/simple/
+backcall==0.2.0
+decorator==5.0.9
 ipykernel==5.1.0
 ipython-genutils==0.2.0
-ipython==7.2.0
-jedi==0.13.2
-jupyter-client==5.2.4
-jupyter-core==4.4.0
-numpy==1.15.4
+ipython==7.9.0
+jedi==0.17.2
+jupyter-client==6.1.13
+jupyter-core==4.6.3
+nest-asyncio==1.5.1
+numpy==1.18.5
 opencv-python==3.4.4.19
 pandas==0.23.4
-parso==0.3.1
-pexpect==4.6.0 ; sys_platform != 'win32'
+parso==0.7.1
+pexpect==4.8.0 ; sys_platform != 'win32'
 pickleshare==0.7.5
 pillow==5.3.0
 pipfile==0.0.2
-prompt-toolkit==2.0.7
-ptyprocess==0.6.0
-pygments==2.3.1
-python-dateutil==2.7.5
-pytz==2018.7
-pyzmq==17.1.2
-six==1.12.0
-toml==0.10.0
-tornado==5.1.1
+prompt-toolkit==2.0.10
+ptyprocess==0.7.0
+pygments==2.9.0
+python-dateutil==2.8.1
+pytz==2021.1
+pyzmq==20.0.0
+six==1.16.0
+toml==0.10.2
+tornado==6.1
 tqdm==4.28.1
-traitlets==4.3.2
-wcwidth==0.1.7
+traitlets==4.3.3
+wcwidth==0.2.5
